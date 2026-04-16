@@ -1,0 +1,211 @@
+/* ===== Navbar ===== */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: linear-gradient(135deg, #F5F0E8 0%, #E8DFD0 100%);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.navbar--scrolled {
+  background: rgba(253, 251, 247, 0.95);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.06);
+}
+
+.navbar__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.navbar__menu-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: var(--black);
+  transition: var(--transition-fast);
+}
+
+.navbar__menu-btn:hover {
+  background: rgba(201, 169, 110, 0.15);
+}
+
+.navbar__logo {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  color: var(--black);
+  transition: var(--transition-fast);
+}
+
+.navbar__logo:hover {
+  color: var(--gold);
+}
+
+.navbar__actions {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.navbar__icon-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: var(--black);
+  transition: var(--transition-fast);
+  position: relative;
+}
+
+.navbar__icon-btn:hover {
+  background: rgba(201, 169, 110, 0.15);
+}
+
+.navbar__cart-badge {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  background: var(--gold);
+  color: white;
+  font-size: 0.6rem;
+  font-weight: 700;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ===== Menu Drawer ===== */
+.menu-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 9998;
+  backdrop-filter: blur(4px);
+}
+
+.menu-drawer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: min(85vw, 380px);
+  background: linear-gradient(180deg, #F5F0E8 0%, #FDFBF7 30%);
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.menu-drawer__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 24px;
+  border-bottom: 1px solid rgba(201, 169, 110, 0.15);
+}
+
+.menu-drawer__brand {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.menu-drawer__close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  color: var(--black);
+  transition: var(--transition-fast);
+}
+
+.menu-drawer__close:hover {
+  background: rgba(201, 169, 110, 0.15);
+}
+
+.menu-drawer__search {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 20px 24px;
+  padding: 12px 16px;
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-full);
+  color: var(--gray-400);
+}
+
+.menu-drawer__search input {
+  flex: 1;
+  font-size: 0.9rem;
+  color: var(--black);
+  background: transparent;
+}
+
+.menu-drawer__search input::placeholder {
+  color: var(--gray-400);
+}
+
+.menu-drawer__nav {
+  flex: 1;
+  padding: 10px 0;
+}
+
+.menu-drawer__link {
+  display: block;
+  padding: 16px 24px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--black);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  transition: var(--transition-fast);
+}
+
+.menu-drawer__link:hover {
+  background: rgba(201, 169, 110, 0.08);
+  color: var(--gold-dark);
+  padding-left: 30px;
+}
+
+.menu-drawer__link--sub {
+  padding-left: 44px;
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: var(--gray-600);
+}
+
+.menu-drawer__link--sub:hover {
+  padding-left: 50px;
+}
+
+.menu-drawer__footer {
+  padding: 24px;
+  text-align: center;
+  border-top: 1px solid rgba(201, 169, 110, 0.15);
+}
+
+.menu-drawer__footer p {
+  font-size: 0.8rem;
+  color: var(--gray-400);
+  line-height: 1.8;
+}

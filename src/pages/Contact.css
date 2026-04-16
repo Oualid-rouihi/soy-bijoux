@@ -1,0 +1,200 @@
+/* ===== Contact Page ===== */
+.contact-header {
+  padding-top: calc(70px + var(--space-3xl));
+  padding-bottom: var(--space-2xl);
+  background: linear-gradient(135deg, var(--beige) 0%, var(--cream) 100%);
+  text-align: center;
+}
+
+.contact-header__title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 700;
+  color: var(--black);
+  margin-bottom: var(--space-sm);
+}
+
+.contact-header__subtitle {
+  font-size: clamp(0.85rem, 2vw, 1rem);
+  color: var(--gray-500);
+  font-weight: 300;
+}
+
+.contact-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-3xl);
+  padding: var(--space-3xl) 0;
+}
+
+/* Form */
+.contact-form__title,
+.contact-info__title {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--black);
+  margin-bottom: var(--space-xl);
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.contact-form__group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.contact-form__group label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--black);
+  letter-spacing: 0.03em;
+}
+
+.contact-form__group input,
+.contact-form__group textarea {
+  padding: 14px 16px;
+  background: var(--white);
+  border: 1.5px solid var(--gray-200);
+  border-radius: var(--radius-md);
+  font-size: 0.9rem;
+  color: var(--black);
+  transition: var(--transition-fast);
+  resize: vertical;
+}
+
+.contact-form__group input:focus,
+.contact-form__group textarea:focus {
+  border-color: var(--gold);
+  box-shadow: 0 0 0 3px rgba(201, 169, 110, 0.15);
+}
+
+.contact-form__group input::placeholder,
+.contact-form__group textarea::placeholder {
+  color: var(--gray-400);
+}
+
+/* Success */
+.contact-success {
+  text-align: center;
+  padding: var(--space-3xl) var(--space-xl);
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.contact-success__icon {
+  font-size: 2.5rem;
+  display: block;
+  margin-bottom: var(--space-md);
+}
+
+.contact-success h3 {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  color: var(--black);
+  margin-bottom: var(--space-sm);
+}
+
+.contact-success p {
+  font-size: 0.9rem;
+  color: var(--gray-500);
+}
+
+/* Contact Info */
+.contact-info__items {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+  margin-bottom: var(--space-2xl);
+}
+
+.contact-info__item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-md);
+}
+
+.contact-info__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background: var(--beige);
+  border-radius: var(--radius-md);
+  color: var(--gold-dark);
+  flex-shrink: 0;
+}
+
+.contact-info__item h4 {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--black);
+  margin-bottom: 2px;
+}
+
+.contact-info__item p {
+  font-size: 0.85rem;
+  color: var(--gray-500);
+}
+
+/* Socials */
+.contact-socials__title {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--black);
+  margin-bottom: var(--space-md);
+}
+
+.contact-socials__links {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.contact-social {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  padding: 14px 20px;
+  background: var(--white);
+  border: 1.5px solid var(--gray-200);
+  border-radius: var(--radius-md);
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--black);
+  transition: var(--transition-fast);
+}
+
+.contact-social:hover {
+  border-color: var(--gold);
+  background: var(--beige);
+  transform: translateX(4px);
+}
+
+.contact-social--whatsapp:hover {
+  border-color: #25D366;
+  background: #E8F5E9;
+  color: #1DA851;
+}
+
+@media (min-width: 768px) {
+  .contact-content {
+    grid-template-columns: 1.2fr 1fr;
+    gap: var(--space-4xl);
+  }
+
+  .contact-socials__links {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: var(--space-md);
+  }
+}

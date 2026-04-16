@@ -1,0 +1,120 @@
+/* ===== Collections Page ===== */
+.collections-header {
+  padding-top: calc(70px + var(--space-3xl));
+  padding-bottom: var(--space-2xl);
+  background: linear-gradient(135deg, var(--beige) 0%, var(--cream) 100%);
+  text-align: center;
+}
+
+.collections-header__title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 700;
+  color: var(--black);
+  margin-bottom: var(--space-sm);
+}
+
+.collections-header__subtitle {
+  font-size: clamp(0.85rem, 2vw, 1rem);
+  color: var(--gray-500);
+  font-weight: 300;
+}
+
+.collections-search {
+  margin: var(--space-xl) 0;
+}
+
+.collections-search__input {
+  width: 100%;
+  padding: 14px 20px;
+  background: var(--white);
+  border: 1.5px solid var(--gray-200);
+  border-radius: var(--radius-full);
+  font-size: 0.9rem;
+  color: var(--black);
+  transition: var(--transition-fast);
+}
+
+.collections-search__input:focus {
+  border-color: var(--gold);
+  box-shadow: 0 0 0 3px rgba(201, 169, 110, 0.15);
+}
+
+.collections-search__input::placeholder {
+  color: var(--gray-400);
+}
+
+.collections-filters {
+  display: flex;
+  gap: var(--space-sm);
+  overflow-x: auto;
+  padding-bottom: var(--space-sm);
+  margin-bottom: var(--space-md);
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.collections-filters::-webkit-scrollbar {
+  display: none;
+}
+
+.collections-filter {
+  padding: 10px 20px;
+  border: 1.5px solid var(--gray-200);
+  border-radius: var(--radius-full);
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--gray-600);
+  white-space: nowrap;
+  transition: var(--transition-fast);
+  background: var(--white);
+}
+
+.collections-filter:hover {
+  border-color: var(--gold-light);
+  color: var(--gold-dark);
+}
+
+.collections-filter--active {
+  background: var(--gold);
+  border-color: var(--gold);
+  color: var(--white);
+}
+
+.collections-count {
+  font-size: 0.8rem;
+  color: var(--gray-400);
+  margin-bottom: var(--space-lg);
+}
+
+.collections-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-md);
+  padding-bottom: var(--space-4xl);
+}
+
+.collections-empty {
+  text-align: center;
+  padding: var(--space-4xl) 0;
+}
+
+.collections-empty p {
+  font-size: 1.1rem;
+  color: var(--gray-400);
+  margin-bottom: var(--space-xl);
+}
+
+@media (min-width: 768px) {
+  .collections-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-lg);
+  }
+}
+
+@media (min-width: 1024px) {
+  .collections-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-xl);
+  }
+}

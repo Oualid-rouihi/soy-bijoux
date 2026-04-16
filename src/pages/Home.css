@@ -1,0 +1,28 @@
+/* ===== Home Page ===== */
+
+/* CTA Banner */
+.cta-banner {
+  padding: var(--space-4xl) 0;
+  background: linear-gradient(135deg, var(--beige) 0%, var(--champagne) 50%, var(--beige) 100%);
+  text-align: center;
+}
+
+.cta-banner__content {
+  max-width: 600px;
+}
+
+.cta-banner__title {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 4vw, 2.2rem);
+  font-weight: 600;
+  color: var(--black);
+  margin-bottom: var(--space-md);
+}
+
+.cta-banner__text {
+  font-size: clamp(0.85rem, 2vw, 1rem);
+  color: var(--gray-500);
+  line-height: 1.7;
+  margin-bottom: var(--space-xl);
+  font-weight: 300;
+}
