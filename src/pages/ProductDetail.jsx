@@ -36,6 +36,8 @@ export default function ProductDetail() {
     .slice(0, 4);
 
   const totalPrice = product.price * quantity;
+  const priceParts = Number(product.price).toFixed(2).split('.');
+  const totalPriceParts = Number(totalPrice).toFixed(2).split('.');
 
   const handleAddToCart = () => {
     if (!product.inStock) return;
@@ -113,7 +115,11 @@ export default function ProductDetail() {
             <h1 className="product-detail__name">{product.name}</h1>
             
             <div className="product-detail__price-row">
-              <span className="product-detail__price">{product.price} Dh</span>
+              <span className="product-detail__price price-formatted">
+                <span className="price-integer">{priceParts[0]}</span>
+                <span className="price-decimal">,{priceParts[1]}</span>
+                <span className="price-currency">Dh</span>
+              </span>
               {product.originalPrice && (
                 <span className="product-detail__original-price">{product.originalPrice} Dh</span>
               )}
@@ -160,7 +166,11 @@ export default function ProductDetail() {
             {quantity > 1 && (
               <div className="product-detail__total">
                 <span>Total:</span>
-                <span className="product-detail__total-value">{totalPrice} Dh</span>
+                <span className="product-detail__total-value price-formatted">
+                  <span className="price-integer">{totalPriceParts[0]}</span>
+                  <span className="price-decimal">,{totalPriceParts[1]}</span>
+                  <span className="price-currency">Dh</span>
+                </span>
               </div>
             )}
 

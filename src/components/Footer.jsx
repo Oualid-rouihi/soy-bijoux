@@ -13,14 +13,14 @@ export default function Footer() {
             <div className="footer__brand">
               <h3 className="footer__logo">SOY BIJOUX</h3>
               <p className="footer__tagline">
-                L'élégance qui vous ressemble. Bijoux artisanaux de qualité, 
+                L'élégance qui vous ressemble. Bijoux artisanaux de qualité,
                 livrés partout au Maroc.
               </p>
               <div className="footer__socials">
-                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="footer__social-link" id="social-instagram" aria-label="Instagram">
+                <a href="https://www.instagram.com/soy_bijoux?igsh=b3QxNXhpaXJjdGdr" target="_blank" rel="noopener noreferrer" className="footer__social-link" id="social-instagram" aria-label="Instagram">
                   <FaInstagram size={20} />
                 </a>
-                <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" className="footer__social-link" id="social-tiktok" aria-label="TikTok">
+                <a href="https://www.tiktok.com/@soy_bijoux?is_from_webapp=1&sender_device=pc" target="_blank" rel="noopener noreferrer" className="footer__social-link" id="social-tiktok" aria-label="TikTok">
                   <FaTiktok size={18} />
                 </a>
                 <a href="https://wa.me/212604965460" target="_blank" rel="noopener noreferrer" className="footer__social-link" id="social-whatsapp" aria-label="WhatsApp">
@@ -53,9 +53,9 @@ export default function Footer() {
                 Recevez nos dernières nouveautés et offres exclusives.
               </p>
               <form className="footer__newsletter" onSubmit={(e) => e.preventDefault()}>
-                <input 
-                  type="email" 
-                  placeholder="Votre email..." 
+                <input
+                  type="email"
+                  placeholder="Votre email..."
                   className="footer__newsletter-input"
                   id="newsletter-email"
                 />

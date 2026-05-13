@@ -130,9 +130,10 @@ export default function Admin() {
                   name="price"
                   required
                   min="0"
+                  step="0.01"
                   value={formData.price}
                   onChange={handleChange}
-                  placeholder="Ex: 120"
+                  placeholder="Ex: 120.50"
                 />
               </div>
 

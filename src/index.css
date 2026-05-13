@@ -138,6 +138,32 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: 0.02em;
 }
 
+/* ===== Price Formatting ===== */
+.price-formatted {
+  display: inline-flex;
+  align-items: baseline;
+  font-family: var(--font-display);
+  color: var(--gold-dark);
+}
+
+.price-integer {
+  font-size: 1.2em;
+  font-weight: 600;
+}
+
+.price-decimal {
+  font-size: 1.2em;
+  font-weight: 600;
+}
+
+.price-currency {
+  font-size: 0.7em;
+  font-weight: 600;
+  margin-left: 4px;
+  position: relative;
+  top: -0.3em;
+}
+
 /* ===== Shimmer Effect ===== */
 @keyframes shimmer {
   0% { background-position: -200% center; }

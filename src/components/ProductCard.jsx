@@ -8,6 +8,8 @@ import './ProductCard.css';
 export default function ProductCard({ product }) {
   const { addToCart } = useCart();
   const [justAdded, setJustAdded] = useState(false);
+  
+  const priceParts = Number(product.price).toFixed(2).split('.');
 
   const handleAddToCart = (e) => {
     e.preventDefault();
@@ -58,7 +60,11 @@ export default function ProductCard({ product }) {
         <div className="product-card__info">
           <h3 className="product-card__name">{product.name}</h3>
           <div className="product-card__price-row">
-            <span className="product-card__price">{product.price} Dh</span>
+            <span className="product-card__price price-formatted">
+              <span className="price-integer">{priceParts[0]}</span>
+              <span className="price-decimal">,{priceParts[1]}</span>
+              <span className="price-currency">Dh</span>
+            </span>
             {product.originalPrice && (
               <span className="product-card__original-price">{product.originalPrice} Dh</span>
             )}

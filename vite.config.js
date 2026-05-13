@@ -55,7 +55,7 @@ function adminApiPlugin() {
               });
               const newId = maxId + 1;
               
-              const parsedPrice = parseInt(price, 10) || 0;
+              const parsedPrice = parseFloat(price) || 0;
               const badgeStr = badge ? `'${badge}'` : 'null';
               const nameStr = JSON.stringify(name || 'Nouveau Produit');
               const categoryStr = JSON.stringify(category || 'bracelets');
